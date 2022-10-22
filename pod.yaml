@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: meupod0
+  labels:
+    numeracao: zero
+spec:
+  containers:
+  - name: site0
+    image:  bioneoficial/conversao-temperatura:latest
+    ports:
+    - containerPort: 80
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: meupod1
+  labels:
+    numeracao: um
+spec:
+  containers:
+  - name: site1
+    image:  bioneoficial/conversao-temperatura:v1
+    ports:
+    - containerPort: 90
